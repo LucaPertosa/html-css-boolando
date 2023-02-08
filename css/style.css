@@ -1,3 +1,10 @@
+/* VARIABLES */
+
+:root {
+    --header-color: #F96902;
+    --footer-color: #1A1A1A;
+}
+
 /* RESET */
 * {
     padding: 0;
@@ -11,7 +18,21 @@ body {
 }
 
 header {
+    width: 100%;
     z-index: 999;
+    background-color: var(--header-color);
+    position: fixed;
+    /* debug */
+    height: 100px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style-type: none;
 }
 /* Card */
 .text-area h3 {
@@ -30,12 +51,58 @@ header {
     text-decoration: line-through;
 }
 
-/* MAIN */
+/* HEADER */
 
-.container {
+nav{
+    width: 100%;
+    height: 100%;
+}
+
+header .container {
     width: 80%;
     margin: 0 auto;
-    padding: 100px 0;
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;;
+    color: white;
+
+}
+/* Nav-bar */
+.type {
+    width: 20% ;
+}
+
+.type-list {
+    display: flex;
+    justify-content: space-between;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* MAIN */
+
+main .container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 170px 0;
     display: flex;
     flex-wrap: wrap;
     gap: 20px;

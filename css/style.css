@@ -5,17 +5,13 @@
     box-sizing: border-box;
 }
 
-/* common */
+/* COMMON */
 body {
     font-family: sans-serif;
 }
 
 header {
     z-index: 999;
-}
-
-img {
-    max-width: 100%;
 }
 
 .price {
@@ -32,6 +28,7 @@ img {
 .container {
     width: 80%;
     margin: 0 auto;
+    padding: 100px 0;
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
@@ -45,15 +42,31 @@ img {
     /* debug */
     /* height: calc(50% / 2 - 40px / 2 ); */
     border: 1px solid blue;
+    position: relative;
 }
 
 /* Item */
-
 .card {
-    position: relative;
     width: 100%;
+    position: relative;
+}
+.img {
+    max-width: 100%;
+    top: 0;
+    left: 0;
+    position: relative;
 }
 
+.img-top {
+    max-width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+
+.card:hover .img-top{
+    display: none;
+}
 .label {
     position: absolute;
     bottom: 25%;
@@ -64,6 +77,7 @@ img {
     padding: .3rem;
     color: white;
     margin-right: .2rem;
+    z-index: 3;
 }
 .discount {
     background-color: red;
@@ -80,4 +94,5 @@ img {
     right: 0;
     top: 10px;
     font-size: 1.2rem;
+    z-index: 4;
 }

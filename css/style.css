@@ -1,5 +1,83 @@
+/* RESET */
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+/* common */
+body {
+    font-family: sans-serif;
+}
+
+header {
+    z-index: 999;
+}
+
+img {
+    max-width: 100%;
+}
+
+.price {
+    color: red;
+    font-weight: bold;
+}
+
+.disc-price {
+    text-decoration: line-through;
+}
+
+/* MAIN */
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    /* debug */
+    border: 1px solid red;
+    /* height: 1200px; */
+}
+
+.col {
+    width: calc(100% / 3 - 40px / 3);
+    /* debug */
+    /* height: calc(50% / 2 - 40px / 2 ); */
+    border: 1px solid blue;
+}
+
+/* Item */
+
+.card {
+    position: relative;
+    width: 100%;
+}
+
+.label {
+    position: absolute;
+    bottom: 25%;
+    left: 0;
+}
+
+.label span {
+    padding: .3rem;
+    color: white;
+    margin-right: .2rem;
+}
+.discount {
+    background-color: red;
+}
+
+.green {
+    background-color: green;
+}
+
+.heart {
+    background-color: white;
+    padding: .3rem .4rem;
+    position: absolute;
+    right: 0;
+    top: 10px;
+    font-size: 1.2rem;
 }
